@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
-
+// lab 8
 @RestController
 public class ProductController {
     private final ProductRepository productRepository; // Declare the dependency
