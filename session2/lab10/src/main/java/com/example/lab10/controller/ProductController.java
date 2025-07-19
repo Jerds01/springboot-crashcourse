@@ -30,5 +30,12 @@ public class ProductController {
         return productRepository.findById(id);
     }
 
+    @PostMapping("/products")
+    @ResponseStatus(HttpStatus.CREATED) // Optional: Returns 201 Created by default for POST success
+    public Product createProduct(@RequestBody Product newProduct) {
+        // newProduct object automatically populated from JSON in request body
+        return productRepository.save(newProduct); // Save and return the saved product (with its new ID)
+    }
+
 
 }
